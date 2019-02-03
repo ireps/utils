@@ -1,0 +1,8 @@
+# Start docker
+docker run -t -i debian /bin/bash
+cd
+whoami
+hostname
+set -o vi
+bind -x '"\C-l": clear   #Bind CTRL+C to Clear command
+apt-get update
