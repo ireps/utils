@@ -1,8 +1,17 @@
-# Start docker
-docker run -t -i debian /bin/bash
+##########################
+# Docker commands assist #
+##########################
+
+docker run -t -i debian /bin/bash   # Start docker container
+docker rm <container ID>            # Remove docker container
 cd
 whoami
 hostname
 set -o vi
-bind -x '"\C-l": clear   #Bind CTRL+C to Clear command
+bind -x '"\C-l": clear'   #Bind CTRL+C to Clear command
 apt-get update
+
+#Reconnect a docker container after Exit#
+docker ps -a                 # list all the containers and find your containder
+docker start <container ID>  # start the exited container
+docker attach <container ID> # attach to your container
